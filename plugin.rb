@@ -17,7 +17,7 @@ module Onebox
             include Engine
             include Engine::StandardEmbed
   
-        r = %r{https?://app.everviz.com/embed/(?<uuid>.+)}
+        r = %r{https?://app.everviz.com/(?:embed|share)/(?<uuid>.+)}
         always_https
         matches_regexp(r)
         
